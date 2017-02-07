@@ -1,0 +1,54 @@
+body
+{
+	background-color:#000000;	
+}
+.textcolorvisible
+{
+	color:#FFFFFF;	
+}
+
+.textcolorinvisible
+{
+	color:#000000;
+}
+.bigfont
+{
+	font-size:110px;
+}
+
+.verybigfont
+{
+	font-size:150px;
+}
+.smallfont
+{
+	font-size:45px;
+}
+.tinyfont
+{
+	font-size:30px;
+}
+.averagefont
+{
+	font-size:60px;
+}
+.mediumfont
+{
+	font-size:90px;
+}
+.leftAlign
+{
+	text-align:left;
+}
+.rightAlign
+{
+	text-align:right;
+}
+.puzzleDiv
+{
+	padding-bottom:10px;
+}
+hr
+{
+	height:10px;
+}
