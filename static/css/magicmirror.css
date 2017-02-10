@@ -18,7 +18,7 @@ body
 
 .verybigfont
 {
-	font-size:150px;
+	font-size:165px;
 }
 .smallfont
 {
@@ -26,7 +26,15 @@ body
 }
 .tinyfont
 {
-	font-size:30px;
+	font-size:28px;
+}
+.xsfont
+{
+	font-size:25px;
+}
+.xxsfont
+{
+	font-size:20px;
 }
 .averagefont
 {
@@ -52,3 +60,24 @@ hr
 {
 	height:10px;
 }
+.bold
+{
+	font-weight:bold;
+}
+.panel
+{
+	
+}
+.forecastHolder
+{
+	margin-bottom:3px;
+	
+	
+	
+	
+}
+.spacer
+{
+	padding-right:5px;
+}
+

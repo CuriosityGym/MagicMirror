@@ -12,25 +12,19 @@
 
 </head>
 <body >
-<?php date_default_timezone_set('Asia/Kolkata'); ?>
+
 
 
 <div class="grid-container  ">
 
 	<div class="grid-100  textcolorvisible">
-		<div class="verybigfont" id='timeHolder'>
-			<?php 			
-				$today = date("g:i a");   
-				print($today)
-			?>
+		<div class="verybigfont bold" id='timeHolder'>
+			&nbsp;
 		</div>
-		<div class="averagefont" id="dateHolder">
-		<b>
-			<?php
-				$today = date("l, M jS");   
-				print($today)
-			?>
-		</b>
+		<div class="averagefont bold" id="dateHolder">
+		
+			&nbsp;
+		
 		</div>
 	</div>
 	
@@ -44,25 +38,27 @@
 	<div class="grid-10">&nbsp;</div>
 </div>
 
+
 <div class="grid-container  ">
 	<div class="grid-30">
 			<div>
-				<img src='./images/sun.png' height='90px'/>
+				<img id='weatherIcon' src='./images/attention.png' height='120px'/>
 			</div>
-			<div class="averagefont textcolorvisible">
+			<div class="averagefont bold textcolorvisible" id="weatherdesc">
 				Sunny
 			</div>
 	</div>
-	<div class="grid-30  textcolorvisible">
+	<div class="grid-30 textcolorvisible">
 		<div>
-				<img src='./images/temperature.png' height='90px'/>
+				<img src='./images/temperature.png' height='120px'/>
 		</div>
-		<div class="averagefont textcolorvisible">
+		<div class="averagefont bold textcolorvisible" id="temperatureDiv">
 				26°C
 		</div>
 	</div>
-	<div class="grid-40  textcolorvisible rightAlign">
-		&nbsp;
+	<div class="grid-40 grid-parent textcolorvisible" id="forecast" >
+		
+		
 	</div>
   
  
