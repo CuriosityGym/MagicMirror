@@ -78,7 +78,14 @@ def getForecast():
         #       return errorText
 
         r = requests.get(requestURL, stream=True)
-        return r.content			
+        return r.content
+
+
+@app.route("/news")
+def getRSSNews():
+        requestURL="https://rss.sciencedaily.com/top/technology.xml"
+        r = requests.get(requestURL, stream=True)
+        return r.content
     
 
 def getData(jsontree):    

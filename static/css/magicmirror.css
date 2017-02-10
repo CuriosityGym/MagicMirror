@@ -80,4 +80,12 @@ hr
 {
 	padding-right:5px;
 }
+.nonpuzzle
+{
+	display:block;
+}
+.puzzle
+{
+	display:none;
+}
 

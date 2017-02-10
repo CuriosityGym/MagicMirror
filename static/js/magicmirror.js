@@ -2,12 +2,11 @@
   
   $(document).ready(function() {
 	  updateDisplay();
-	  updateData();
-	  getForecast();
-   
+	  updateData(); //Populate the first time on refresh.
+	  
    setInterval(function() {
-                  updateDisplay();
-                }, 1000); 
+                  updateDisplay(); //do this every 3 second
+                }, 3000); 
 				
    setInterval(function() {
                   updateData();
@@ -76,8 +75,13 @@
   
   function updateData()
   {
-	  getWeatherDescription();
+	  //updateDisplay();
+	 // updateData();
 	  getTemperature();
+	  getWeatherDescription();	 
+	  getForecast();
+	  getNewsRSS();
+	  
   }
   
   function getWeatherDescription()
@@ -170,6 +174,24 @@
 		}
 		//alert(imageName);
 		return imageName;
+  }
+  
+  function getNewsRSS()
+  {
+	 $.ajax({url: "/news", success: function(result){
+       
+	   xmlDoc = $.parseXML( result );
+	   $xml = $( xmlDoc )
+	   $titles = $xml.find( "item" ).find("title");
+	   htmlString="";
+	   htmlString=htmlString+"<ul>";
+	   $titles.slice(0, 5).each(function( index ) {
+			htmlString=htmlString+"<li>"+$( this ).text()+"</li>";
+		});
+		htmlString=htmlString+"</ul>";
+		$("#newsDiv").html(htmlString);
+	   
+    }});
   }
   
   
