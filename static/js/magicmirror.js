@@ -6,12 +6,21 @@
 	  
    setInterval(function() {
                   updateDisplay(); //do this every 3 second
+				  
                 }, 3000); 
 				
    setInterval(function() {
                   updateData();
                 }, 36000000); 
+				
+	setInterval(function() {
+                  animate();
+                }, 10000); 
   });
+  
+  
+  
+  
   
   function updateTime()
   {
@@ -29,7 +38,7 @@
 	  hours = hours % 12;
 	  hours = hours ? hours : 12; // the hour '0' should be '12'
 	  minutes = minutes < 10 ? '0'+minutes : minutes;
-	  var strTime = "0"+hours + ':' + minutes + ' ' + ampm;
+	  var strTime = hours + ':' + minutes + ' ' + ampm;
 	  return strTime;
 }
   var days = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
@@ -192,6 +201,17 @@
 		$("#newsDiv").html(htmlString);
 	   
     }});
+  }
+  
+  function animate()
+  {
+	  
+	 /*$("#newsDiv").animate({
+                width: 0
+            });
+	 //$("#quote").slideDown().show();
+	
+*/
   }
   
   
