@@ -195,7 +195,7 @@
 	   
 	   htmlString="<b>Phrases Of the Day</b><br>";
 	   htmlString=htmlString+"<ul>";
-	   $titles.slice(0, 3).each(function( index ) {
+	   $titles.slice(0, 4).each(function( index ) {
 			htmlString=htmlString+"<li><b>"+ $( this ).find("title").text() + "</b>: " + $( this ).find("summary").text() + "</li>";
 		});
 		htmlString=htmlString+"</ul>";
