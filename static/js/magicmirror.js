@@ -191,7 +191,7 @@
        
 	   xmlDoc = $.parseXML( result );
 	   $xml = $( xmlDoc )
-	   $titles = $xml.find( "item" ).find("title");
+	   $titles = $xml.find( "item" ).find("description");
 	   htmlString="";
 	   htmlString=htmlString+"<ul>";
 	   $titles.slice(0, 5).each(function( index ) {
