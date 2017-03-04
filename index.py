@@ -83,7 +83,7 @@ def getForecast():
 
 @app.route("/news")
 def getRSSNews():
-        requestURL="http://www.dictionary.com/wordoftheday/wotd.rss"
+        requestURL="http://www.macmillandictionary.com/potw/potwrss.xml"
         r = requests.get(requestURL, stream=True)
         return r.content
     
