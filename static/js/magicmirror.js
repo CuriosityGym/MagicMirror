@@ -193,10 +193,10 @@
 	   $xml = $( xmlDoc )
 	   $titles = $xml.find( "entry" )
 	   
-	   htmlString="";
+	   htmlString="<b>Phrases Of the Day</b><br>";
 	   htmlString=htmlString+"<ul>";
-	   $titles.slice(0, 5).each(function( index ) {
-			htmlString=htmlString+"<li>"+ $( this ).find("title").text() + ": " + $( this ).find("summary").text() + "</li>";
+	   $titles.slice(0, 3).each(function( index ) {
+			htmlString=htmlString+"<li><b>"+ $( this ).find("title").text() + "</b>: " + $( this ).find("summary").text() + "</li>";
 		});
 		htmlString=htmlString+"</ul>";
 		$("#newsDiv").html(htmlString);
