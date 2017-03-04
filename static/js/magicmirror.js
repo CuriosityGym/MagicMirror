@@ -196,7 +196,7 @@
 	   htmlString="";
 	   htmlString=htmlString+"<ul>";
 	   $titles.slice(0, 5).each(function( index ) {
-			htmlString=htmlString+"<li>"+ $( this ).find("title") + ": " + $( this ).find("summary") + "</li>";
+			htmlString=htmlString+"<li>"+ $( this ).find("title").text() + ": " + $( this ).find("summary").text() + "</li>";
 		});
 		htmlString=htmlString+"</ul>";
 		$("#newsDiv").html(htmlString);
