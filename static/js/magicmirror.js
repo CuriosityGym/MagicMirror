@@ -191,11 +191,12 @@
        
 	   xmlDoc = $.parseXML( result );
 	   $xml = $( xmlDoc )
-	   $titles = $xml.find( "item" ).find("description");
+	   $titles = $xml.find( "entry" )
+	   
 	   htmlString="";
 	   htmlString=htmlString+"<ul>";
 	   $titles.slice(0, 5).each(function( index ) {
-			htmlString=htmlString+"<li>"+$( this ).text()+"</li>";
+			htmlString=htmlString+"<li>"+ $( this ).find("title") + ": " + $( this ).find("summary") + "</li>";
 		});
 		htmlString=htmlString+"</ul>";
 		$("#newsDiv").html(htmlString);
