@@ -177,6 +177,9 @@
 			case "Clear":
 				imageName="./images/sun.png"
 				break;
+			 case "Haze":
+				imageName="./images/haze.png"
+				break;
 			default:
 				imageName="./images/attention.png"
 				break;
