@@ -196,7 +196,7 @@
 	   $xml = $( xmlDoc )
 	   $titles = $xml.find( "entry" )
 	   
-	   htmlString="<b>Phrases Of the Day</b><br>";
+	   htmlString="<b>Phrases Of the Week</b><br>";
 	   htmlString=htmlString+"<ul>";
 	   $titles.slice(0, 4).each(function( index ) {
 			htmlString=htmlString+"<li><b>"+ $( this ).find("title").text() + "</b>: " + $( this ).find("summary").text() + "</li>";
