@@ -180,6 +180,9 @@
 			 case "Haze":
 				imageName="./images/haze.png"
 				break;
+			   case "Clouds":
+				imageName="./images/cloudy.png"
+				break;
 			default:
 				imageName="./images/attention.png"
 				break;
