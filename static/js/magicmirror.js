@@ -183,6 +183,12 @@
 			   case "Clouds":
 				imageName="./images/cloudy.png"
 				break;
+			  case "Drizzle":
+				imageName="./images/umbrella.png"
+				break;
+			  case "Rain":
+				imageName="./images/rain.png"
+				break;
 			default:
 				imageName="./images/attention.png"
 				break;
