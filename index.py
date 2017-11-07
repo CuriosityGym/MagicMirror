@@ -84,7 +84,9 @@ def getForecast():
 @app.route("/news")
 def getRSSNews():
         requestURL="http://www.macmillandictionary.com/potw/potwrss.xml"
-        r = requests.get(requestURL, stream=True)
+	headers = { 'User-Agent': 'Mozilla/5.0 (Windows NT 6.0; WOW64; rv:24.0) Gecko/20100101 Firefox/24.0' }
+        r = requests.get(requestURL, headers=headers)
+        #r = requests.get(requestURL, stream=True)
         return r.content
     
 
