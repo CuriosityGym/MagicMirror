@@ -7,10 +7,10 @@ import urllib
 import socket
 from threading import Thread
 import sys
-import queue
 
 
-myQueue=queue.Queue()
+
+
 errorText="Error In Parsing"
 gCityID="1275339"
 gAppID="15373f8c0b06b6e66e6372db065c4e46"
@@ -220,6 +220,7 @@ def recieveUDPForPingPong():
         print("Starting Thread")
         UDP_PORT = 8000
         sock = socket.socket(socket.AF_INET,socket.SOCK_DGRAM) # UDP
+	sock.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
         sock.bind(('',UDP_PORT))
         
         while True:
