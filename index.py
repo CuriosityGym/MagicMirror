@@ -7,17 +7,21 @@ import urllib
 import socket
 from threading import Thread
 import sys
+import os
 
 
 
 
+import os
+dirname, filename = os.path.split(os.path.abspath(__file__))
+#print(dirname)
+#exit()
 errorText="Error In Parsing"
 gCityID="1275339"
 gAppID="15373f8c0b06b6e66e6372db065c4e46"
-filename='temp.json'
-deviceConfigFileName="remoteDeviceConfig.json"
+filename=os.path.join(dirname,'temp.json')
+deviceConfigFileName=os.path.join(dirname,"remoteDeviceConfig.json")
 deviceConFigJSON=None
-
 pingPongDeviceName='ping-pong'
 
 
@@ -220,7 +224,7 @@ def recieveUDPForPingPong():
         print("Starting Thread")
         UDP_PORT = 8000
         sock = socket.socket(socket.AF_INET,socket.SOCK_DGRAM) # UDP
-	sock.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
+        sock.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
         sock.bind(('',UDP_PORT))
         
         while True:
