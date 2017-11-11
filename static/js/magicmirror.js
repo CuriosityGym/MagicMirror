@@ -16,7 +16,53 @@
 	setInterval(function() {
                   animate();
                 }, 10000); 
+	setInterval(function() {
+                  showPingPong();
+                }, 5000); 
+				
+				
   });
+  var checkPingPong=true;
+  function showPingPong()
+  {
+	  
+	  
+	  $.ajax({url: "/hasPingPongEnumerated", success: function(result){
+			pingPongAddressJSON=result;
+			hasEnumerationWorked=pingPongAddressJSON.connection;
+			if(hasEnumerationWorked=="false")
+			{
+				checkPingPong=true;
+				$("#pingPongDIV").slideUp().hide();
+				
+				$("#newsDiv").slideDown().show();
+				return true;
+			}
+			else if(hasEnumerationWorked=="true")
+			{
+				
+				if(!checkPingPong)
+				{
+					return true;
+				}
+				checkPingPong=false;
+				pingpongIP=pingPongAddressJSON.ip;
+				pingpongPort=pingPongAddressJSON.port;
+				console.log("pingpongIP: "+pingpongIP);
+				console.log("pingpongPort: "+pingpongPort);
+				$("#newsDiv").slideUp().hide();
+				pingPongURL="http://"+pingpongIP
+				$("#pingPongIframe").attr('src', pingPongURL)
+				$("#pingPongDIV").slideDown().show()
+				checkPingPong=false;
+				
+			}
+			
+		}
+		}
+		
+	);
+  }
   
   
   
@@ -230,6 +276,11 @@
 	 //$("#quote").slideDown().show();
 	
 */
+  }
+  
+  function resizeIframe(obj) {
+	  alert(obj.contentWindow.document.body.scrollHeight);
+    obj.style.height = obj.contentWindow.document.body.scrollHeight + 'px';
   }
   
   
